@@ -21,7 +21,7 @@ if (markImc > johnImc) {
 */
 
 //Functions & Arrays:
-
+/*
 function tipCalculator (valuePaid) {
     var tipPaid;
     if (valuePaid < 50) {
@@ -38,6 +38,40 @@ var tips = [tipCalculator(valuesPaid[0]), tipCalculator(valuesPaid[1]), tipCalcu
 var finalValues = [valuesPaid[0] + tips[0], valuesPaid[1] + tips[1], valuesPaid[2] + tips[2]];
 
 console.log(tips, finalValues);
+*/
+
+//Objects & Methods:
+
+var mark = {
+    fullName: 'Mark Smith',
+    height: 1.78,
+    weight: 78,
+    calcBmi: function(){
+        this.bmi = this.weight / (this.height * this.height);
+    }
+}
+
+var john = {
+    fullName: 'John Doe',
+    height: 1.90,
+    weight: 98,
+    calcBmi: function(){
+        this.bmi = this.weight / (this.height * this.height);
+    }
+}
+
+john.calcBmi();
+mark.calcBmi();
+console.log(mark, john);
+
+if (john.bmi > mark.bmi) {
+    console.log("John's BMI is higher than Mark's. It's " + john.bmi);
+}else if (mark.bmi > john.bmi) {
+    console.log("Mark's BMI is higher than John's. It's " + mark.bmi);
+}else {
+    console.log("Mark's and John's BMI are the same: " + mark.bmi);
+}
+
 
 </script>
 </html>
