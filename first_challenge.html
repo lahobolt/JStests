@@ -1,5 +1,7 @@
 <html>
 <script> 
+
+/*
 var johnHeight = 1.70;
 var johnWeight = 80;
 var markHeight = 1.90;
@@ -15,6 +17,27 @@ if (markImc > johnImc) {
 } else {
     console.log("False");
 }
+
+*/
+
+//Functions & Arrays:
+
+function tipCalculator (valuePaid) {
+    var tipPaid;
+    if (valuePaid < 50) {
+        return tipPaid = valuePaid * 0.2;
+    } else if (valuePaid > 50 && valuePaid < 200) {
+        return tipPaid = valuePaid * 0.15;
+    } else {
+        return tipPaid = valuePaid * 0.1;
+    }
+}
+
+var valuesPaid = [124, 28, 268];
+var tips = [tipCalculator(valuesPaid[0]), tipCalculator(valuesPaid[1]), tipCalculator(valuesPaid[2])];
+var finalValues = [valuesPaid[0] + tips[0], valuesPaid[1] + tips[1], valuesPaid[2] + tips[2]];
+
+console.log(tips, finalValues);
 
 </script>
 </html>
